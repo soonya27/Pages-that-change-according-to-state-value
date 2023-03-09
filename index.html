@@ -115,7 +115,6 @@
         function updateState() {
             const url = window.location.search;
             const urlParams = new URLSearchParams(url);
-
             const state = urlParams.get('state');
             function changeState(updatedState) {
                 return updatedState ?? state;
@@ -133,7 +132,7 @@
                 { table: 'table4', info: '테이블4' },                  //3
             ];
             const stateList = [
-                { state: '', text: '전체보기', list: [0, 1, 2, 3] },
+                { state: null, text: '전체보기', list: [0, 1, 2, 3] },
                 { state: 1, text: '완료', list: [0] },
                 { state: 0, text: '미배정', list: [3] },
                 { state: 9, text: '대기', list: [1, 2] },
